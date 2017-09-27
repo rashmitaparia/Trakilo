@@ -25,6 +25,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/new-age.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/infinite-slider.css">
 
   </head>
 
@@ -78,7 +79,7 @@
                     <iframe src="https://www.youtube.com/embed/x1GArz2hgP8?autoplay=1" frameborder="0" allowfullscreen style="width: 100%;height: 100%;"></iframe>
                     <!-- width="560" height="315" -->
                   </div>
-                  
+
                   <div class="button">
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                   </div>
@@ -233,7 +234,26 @@
       </div>
       <div class="overlay"></div>
     </section>
-
+    
+       <section class="padding50">
+        <div class="container">
+          <h2 class="section-heading text-center marginbottom50">Websites we support</h2>
+          <div class="customer-logos slider">
+            <div class="slide"><img src="img/amazon2.png"></div>
+            <div class="slide"><img src="img/flipkart.png"></div>
+            <div class="slide"><img src="img/jabong.png"></div>
+            
+            <div class="slide"><img src="img/myntra.png"></div>
+            
+            <div class="slide"><img src="img/snapdeal.png"></div>
+            <div class="slide"><img src="img/zivame2.png"></div>
+            <div class="slide"><img src="img/paytmmall.png"></div>
+          </div>
+          
+        </div>
+          
+       </section>
+  
     <section class="contact bg-primary" id="contact">
       <div class="container">
         <h2>We
@@ -290,13 +310,36 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
-
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.customer-logos').slick({
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 1000,
+              arrows: false,
+              dots: false,
+              pauseOnHover: false,
+              responsive: [{
+                  breakpoint: 768,
+                  settings: {
+                      slidesToShow: 4
+                  }
+              }, {
+                  breakpoint: 520,
+                  settings: {
+                      slidesToShow: 3
+                  }
+              }]
+          });
+      });
+    </script>
   </body>
 
 </html>
